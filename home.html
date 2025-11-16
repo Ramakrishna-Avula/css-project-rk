@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: clip;
+        }
+        /* *{
+            box-sizing:border-box;
+        } */ 
+        .navparent{
+            height: 90px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            position: fixed;
+            background-color: rgb(23, 142, 41);
+            align-items: center;
+            gap: 18px;
+            margin-left: 0px;
+            z-index: 100;
+            box-shadow: 5px 0px 10px black;
+        }
+        .navch1{
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 5%;
+            color:rgb(255, 128, 0);
+            stroke-width:5px;
+            stroke: white;
+    
+            
+        }
+        .navch2{
+            margin-left: 45%;
+        }
+        .navparent a:link,.navparent a:visited{
+            color:white;
+            text-decoration-line: none;
+            
+        
+        }
+        .navch2,.navch3,.navch4,.navch5,.navch6{
+            font-size: 20px;
+            color: white;
+
+        }
+        .navparent a:active{
+            text-decoration-line: underline;
+        }
+        .navparent a:hover{
+            color: orange;
+        }
+        .section1{
+            /* background-image:url(https://wallpaperaccess.com/full/3060221.jpg); */
+            height: 900px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size:cover;
+            position: relative;
+            left: 0px;
+          
+            background-attachment: fixed;
+            animation: scale 16s ease-in-out infinite;
+           
+
+        }
+        @keyframes scale{
+            0%{
+                background-image: url(https://uicookies.com/demo/theme/haus/img/slider_4.jpg);
+               transform: scale(1);
+            }
+            25%{
+                background-image: url(https://uicookies.com/demo/theme/haus/img/slider_3.jpg);
+                transform: scale(1);
+            }
+            50%{
+                background-image: url(https://uicookies.com/demo/theme/haus/img/slider_2.jpg);
+                transform: scale(1);
+            }
+            75%{
+                background-image: url(https://uicookies.com/demo/theme/haus/img/slider_3.jpg);
+            }
+            100%{
+                background-image: url(https://uicookies.com/demo/theme/haus/img/slider_1.jpg);
+
+            }
+        }
+
+        .section1sub1{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(244, 238, 242, 0.562);
+            z-index: 1;
+            position: relative;
+            top: 0px;
+        }
+        .blackpop{
+            background-color: black;
+            margin-top: 300px;
+            height: 200px;
+            width:800px;
+            z-index: 2;
+            position: absolute;
+            margin-left: 25%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(251, 118, 2, 0.975);
+            animation: scaleup 2s ease 1;
+        }
+        @keyframes scaleup{
+            from{
+                transform:translateY(50px);
+                opacity: 0%;
+        
+            }
+            to{opacity: 100%;
+
+            }
+        }
+        .blackpop>p{
+            color: white;
+            font-size:29px;
+            margin-left: 26%;
+            padding-top: 5px;
+           
+        }
+        #adress{
+            margin-left: 45px;
+            height: 50px;
+            width: 300px;
+            position: relative;
+            appearance: none;
+            padding-left: 25px;
+            
+        }
+        #selectop,#adress{
+            height: 50px;
+            
+            appearance: none;
+            box-sizing: border-box;
+            margin-top: -20px;
+            outline: none;
+            font-size: 19px;
+        }
+        #selectop{
+            padding-left: 20px;
+            width: 250px;
+            margin-left: -10px;
+            position: relative;
+        
+        }
+        #buttonsearch{
+            background-color: rgb(9, 184, 9);
+            height: 50px;
+            padding: 10px;
+            appearance: none;
+            box-sizing: border-box;
+            top: 5px;
+            outline: none;
+            font-size: 19px;
+            color: white;
+            margin-left: -10px;
+            padding-left: 28px;
+            padding-right: 28px;
+          
+        }
+        #location{
+            position: absolute;
+            margin-left:-295px;
+            color: rgba(4, 4, 4, 0.703);
+            margin-top: 17px;
+            z-index: 5;
+        }
+        #dropicon{
+            position: absolute;
+            margin-left: -35px;
+            margin-top: 17px;
+            color: rgb(8, 3, 0);
+        }
+        #quotesearch{
+            color: rgb(3, 254, 28);
+            margin-top:10px;
+            font-size: 20px;
+            padding-left: 69px;
+        
+        }
+        #searchicon{
+            position: absolute;
+            margin-left: -150px;
+            color: white;
+            margin-top: 16px;
+        }
+        .section2{background-color:white;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 55px;
+        /* padding-left: 100px; */
+        padding-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        flex-wrap: wrap;
+        padding-bottom: 80px;
+        margin-left: 10px;
+
+        }
+        .section2sub1,.section2sub2,.section2sub3{
+            height:80%;
+            width: 20%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            max-width: 550px;
+            text-align: center;
+         
+        }
+        .section2 img{
+            height: 150px;
+            width: 160px;
+        }
+        #section2p2{
+            color: grey;
+        }
+        #linksection2{
+            color: blue;
+            text-decoration: none;
+        }
+        #linksection2:hover{
+            color: black;
+        }
+        #section2p1{
+            font-size: 20px;
+        }
+        .section3{
+            display: grid;
+            height: 700px;
+            width:1200px;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 10px;
+            justify-content: center;
+            /* padding: 100px; */
+            margin-left: 150px;
+            padding-bottom: 80px;
+           
+           
+        }
+        
+     
+        #section3img1,.overlay1{
+            grid-column: 1/4;
+            grid-row: 1/3;
+            width: 100%;
+            height: 100%;
+            filter: opacity(50);
+            overflow:hidden;
+            position: relative;
+            
+            
+        }
+        #section3img2,.overlay2{
+            grid-column: 4/7;
+            grid-row: 1/3;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        #section3img3,.overlay3{
+            grid-column: 1/3;
+            grid-row: 3/4;
+            width: 100%;
+            height: 100%; 
+            overflow: hidden;
+            position: relative;
+        }
+        #section3img4,.overlay4{
+            grid-column: 3/5;
+            grid-row: 3/4;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        #section3img5,.overlay5{
+            grid-column: 5/7;
+            grid-row: 3/4;
+            width: 100%;
+            height: 100%; 
+            overflow: hidden;
+            position: relative;
+        }
+        .sec3head{
+            display: flex;
+            justify-content: center;
+        }
+        .sec3head>p{font-size:35px;
+            margin-top: 100px;
+            margin-left: 70px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(44, 41, 41);
+            
+        }
+        .overlay1,.overlay2,.overlay3,.overlay4,.overlay5{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 11, 11, 0.5);
+            z-index: 2;
+            pointer-events: none;
+
+        }
+
+        .section3 img{
+            width: 100%;
+            height: 100%;
+            transition: transform 0.4s ease;
+            object-fit: cover;
+            display: block;
+            
+    }
+        .section3 img:hover{
+            transform: scale(1.1);
+        }
+        #section3img1onp1{
+            position: absolute;
+            top:50%;
+            left:40%;
+            font-size: 25px;
+            color:#fff;
+            z-index: 5;
+            /* pointer-events: none; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+        
+        }
+        #section3img1onp2{
+            position: absolute;
+            top:50%;
+            left:41%;
+            margin-top: 30px;
+            font-size: 15px;
+            color:rgb(194, 193, 193);
+            z-index: 5;
+        }
+        .section4{
+            background-image:url(https://uicookies.com/demo/theme/haus/img/slider_2.jpg);
+            height: 450px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size:cover;
+            position: relative;
+            left: 0px;
+          
+            background-attachment: fixed;
+            
+           
+           
+
+        }
+        
+            
+
+        
+        .section4sub1{
+            height: 100%;
+            width: 100%;
+            background-color:rgba(11, 11, 11, 0.697);
+            z-index: 1;
+            position: relative;
+            top: 0px;
+            
+        }
+        #section4p1{
+            position: absolute;
+            top: 85px;
+            left: 650px;
+            color: #fff;
+            font-size: 35px;
+        }
+        #section4p2{
+            position: absolute;
+            top: 145px;
+            left: 300px;
+            color: rgb(186, 184, 184);
+            font-size: 25px;
+            
+        }
+        #section4l1{
+            position: absolute;
+            top: 222px;
+            left: 45%;
+            color: #fff;
+            font-size: 20px;
+            background-color: rgb(46, 106, 236);
+            text-decoration: none;
+            text-align: center;
+            text-align: justify;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            transition: transform 0.6s ease;
+
+
+        }
+        #section4l1:hover{
+            background-color:  rgb(96, 143, 243);
+        }
+        .section5{
+            background-color: #f7f7f7;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .section5titel{
+            margin-left: 45%;
+            font-size: 35px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .section5flexlayout{
+            display: flex;
+            height: 1100px;
+            width:1400px;
+            flex-direction: row;
+            margin-left: 100px;
+            padding: 50px;
+            justify-content: start;
+            align-items: start;
+            flex-wrap: wrap;
+            gap: 25px;
+            /* position: relative; */
+            background-color: #f7f7f7;
+            
+        }
+        .section5flexlayout .section5flexlayoutch1{
+            background-color:#ffffff;
+            height: 50%;
+            width: 28%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+            overflow: hidden;
+            position: relative;
+            
+            
+
+        }
+        .section5flexlayout .section5flexlayoutch1:hover{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.473);
+            transform:translatez(20px) translateY(-20px);
+           top: 25px;
+
+        }
+        .section5flexlayoutch1 img{
+            height: 50%;
+            width: 100%;
+            
+        }
+        .section5flexlayoutch1 #p51{
+            color:#336aab;
+            font-size: 23px;
+            margin-left:-90px;
+        }
+        .section5flexlayoutch1 #seclocation5{
+    
+            color: gray;
+            font-size: 20px;
+            position: absolute;
+            top: 329px;
+            left: 10px;
+
+        }
+        .section5flexlayoutch1 #p52{
+            color: rgba(128, 128, 128, 0.836);
+            font-size: 16px;
+            position: absolute;
+            top: 319px;
+            left: 38px;
+        }
+        .section5flexlayoutch1 #sale5{
+            color:white;
+            background-color:#22eaaa;
+            font-size: 18px;
+            position: absolute;
+            top: 345px;
+            left:16px;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+        .section5flexlayoutch1 #prise5{
+            color:#3c74ae;
+            font-size: 43px;
+            position: absolute;
+            top: 345px;
+            left:16px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .section5flexlayoutch1 #monthfor5{
+            color:grey;
+            font-size: 20px;
+            position: absolute;
+            top: 398px;
+            left:229px;
+            background-color: rgba(253, 147, 17, 0);
+            
+           
+        }
+        .section5foot{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            width: 100%;
+            justify-items: flex-start;
+            margin-top: 130px;
+            margin-left: 20px;
+            row-gap: 10px;
+            
+            
+            
+        }
+        .sec5footch1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        
+            
+            
+        }
+        .sec5footch2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+    
+            
+        }
+        .sec5footch3{
+            grid-column: 3/4;
+            grid-row: 1/2;
+        
+            
+        }
+        .sec5footch4{
+            grid-column: 4/5;
+            grid-row: 1/2;
+            
+        }
+        .sec5footch5{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            color: grey;
+        }
+        .sec5footch6{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            color: grey;
+        }
+        .sec5footch7{
+            grid-column: 3/4;
+            grid-row: 2/3;
+            color: grey;
+            
+        }
+        .sec5footch8{
+            grid-column: 4/5;
+            grid-row: 2/3;
+            color: grey;
+        }
+        .section5flexlayoutch1 #rent5{
+            color:white;
+            background-color:red;
+            font-size: 18px;
+            position: absolute;
+            top: 345px;
+            left:16px;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .section5flexlayoutch1 #wish{
+            
+            position: absolute;
+            top:4px;
+            left:4px;
+
+           
+        }
+        .section5flexlayoutch1 #wishbg{
+            color:red;
+            font-size: 30px;
+            position: absolute;
+            top: 240px;
+            left:320px;
+            background-color:white;
+            border-radius: 100%;
+            width:39px;
+            height:39px;
+
+        }
+        .section5flexlayoutch1 #sec5wishlink:hover{
+            color:white;
+            /* background-color: red; */
+        }
+        #sec5wishlink{
+            text-decoration: none;
+            color:red;
+        }
+        .section5flexlayoutch1 #wishbg:hover{
+             background-color:red;
+        } 
+        .section6{
+            height:700px;
+            background-color: #22eaaa;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+        .section6parent{
+            height: 100%;
+            width: 100%;
+            background-color: pink;
+            display: flex;
+            flex-direction: row;
+            justify-items: flex-start;
+        }
+        .section6pch1{
+            height: 100%;
+            width: 50%;
+            background-color:#161c2e;
+            color: white;
+        }
+        .section6pch2{
+            height: 100%;
+            width: 50%;
+            
+        }
+        .section6pch2 img{
+            width: 100%;
+            height: 100%;
+        }
+        .section6pch1 p{
+            margin-left:100px;
+            margin-right: 100px;
+        }
+        .section6pch1>#p1{
+            color:gray ;
+            margin-top: 150px;
+            font-size: 20px;
+        }
+        .section6pch1>#p2{
+            color:white;
+            margin-top: 10px;
+            font-size: 40px;
+        }
+        .section6pch1>#p3{
+            color:gray;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .section6pch1>#p4{
+            color:gray;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .section6pch1>#p5{
+            color:white;
+            margin-top: 50px;
+            font-size: 20px;
+            background-color: #336aab;
+            padding-left:28px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 28px;
+            width: 120px;
+          
+            
+        }
+        .section6pch1 a{
+            text-decoration: none;
+            color: #fff;
+
+
+        }
+        .section7{
+            padding-top: 50px;
+            height:950px;
+            background-color: #f7f7f7;
+           
+        }
+        .section7titel{
+            display: flex;
+            justify-content: center;
+            font-size: 35px;
+        }
+        .section7parent{
+            height:850px;
+            width: 80%;
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+            grid-template-columns:repeat(3,1fr);
+            gap:40px;
+            justify-content: center;
+            background-color:#f6f6f6;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin-left:150px;
+            
+        }
+        .section7parentch1{
+            width:90%;
+            height:90%;
+            background-color:white;
+            align-self: center;
+            box-shadow: 0px 0 20px rgba(0, 0, 0, 0.473);
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .section7parentch2{
+            width:90%;
+            height:90%;
+            background-color:white;
+            align-self: center;
+            box-shadow: 0px 0 20px rgba(0, 0, 0, 0.473);
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .section7parentch3{
+            width:90%;
+            height:90%;
+            background-color:white;
+            align-self: center;
+            box-shadow: 0px 0 20px rgba(0, 0, 0, 0.473);
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        .section7parentch4{
+            width:90%;
+            height:90%;
+            background-color:white;
+            align-self: center;
+            box-shadow: 0px 0 20px rgba(0, 0, 0, 0.473);
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .section7parentch5{
+            width:90%;
+            height:90%;
+            background-color:white;
+            align-self: center;
+            box-shadow: 0px 0 20px rgba(0, 0, 0, 0.473);
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .section7parentch6{
+            width:90%;
+            height:90%;
+            background-color:white;
+            align-self: center;
+            box-shadow: 0px 0 20px rgba(0, 0, 0, 0.473);
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+        #section7img{
+            width: 100px;
+            height: 100px;
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+        #section7p1{
+            font-size: 20px;
+            margin-left: 120px;
+        }
+        #section7p2{
+            font-size: 20px;
+            margin-left: 50px;
+            color: gray;
+            margin-right: 50px;
+            text-align: center;
+            line-height: 30px;
+
+        }
+        #section7imgsearch{
+            width: 100px;
+            height: 100px;
+            margin-left: 125px;
+            margin-top: 25px;
+        }
+        #section7imgbook{
+            width: 190px;
+            height: 110px;
+            margin-left: 100px;
+            margin-top: 15px;  
+        }
+        .section8{
+            height:470px;
+            padding-top: 30px;
+            padding-bottom: 50px;
+            background-color: #f7f7f7;
+        }
+        .section8titel{
+            display: flex;
+            justify-content: center;
+            font-size: 32px;
+        }
+        .section8parent{
+            display: flex;
+            flex-direction:row;
+            background-color: #f7f7f7;
+            height: 380px;
+            width: 75%;
+            margin-left:160px;
+            padding: 50px;
+            gap: 20px;
+            justify-content: space-around;
+          
+        }
+        .section8child{
+            height: 300px;
+            width: 300px;
+            background-color: #ffffff;
+            justify-content: center;
+            justify-items: center;
+
+        }
+        .profileimgbg{
+            width: 110px;
+            height: 110px;
+            margin-top: 20px;
+            border-radius: 100%;
+            background-color: #22eaaa;
+        }
+        #section8p1{
+            font-size:22px;
+        }
+        #section8p2{
+            font-size:18px;
+            justify-items: center;
+            margin-top: -18px;
+            color: grey;
+
+        }
+        .section8child a{
+            text-decoration: none;
+            color: #3c74ae;
+            font-size: 20px;
+            margin-left: 30%;
+            
+        }
+        .profileimgbg img{
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+        .section8child a:hover{
+            text-decoration: none;
+            color:black;
+            font-size: 20px;
+            margin-left: 30%;
+            
+        }
+        .section9{
+            height:590px;
+            background-color:black;
+            padding-top:100px;
+            padding-bottom:155px;
+
+
+
+        }
+        .section9p{
+            height:90%;
+            background-color:black;
+            display: flex;
+           flex-direction: column;
+            align-content: space-around;
+           padding-left: 100px;
+           color: #ffffff;
+           justify-items: flex-start;
+           gap: 100px;
+          
+           
+           
+        }
+        .section9p1{
+            height:60%;
+            width: 90%;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-around;
+            background-color:black;
+            color: #ffffff;
+            font-size: 18px;
+           
+
+        }
+        #linksec9ch2{
+            color: grey;
+            text-decoration: none;
+        }
+        #linksubsec9ch2{
+            color: rgba(128, 128, 128, 0.696);
+            font-size: 13;
+            
+        }
+        #linksec9ch2:hover{
+            color:white;
+            text-decoration:underline;
+        }
+        #linksubsec9ch2:hover{
+            color:white;
+            text-decoration:underline;
+        
+        }
+        #section9mail{
+            height: 50px;
+            background-color: black;
+            border:50px white;
+            box-shadow: 0px 0px 10% white;
+        }
+        #sendbutton{
+            background-color: #184472;
+            color: #ffffff;
+            font-size: 20px;
+            width: 100px;
+            height:50px;
+            border: 15px white;
+        }
+        .section9p2{
+            height:27%;
+            width: 90%;
+            display: flex;
+            flex-direction:row;
+            justify-content:flex-start;
+            align-content: center;
+            background-color:black;
+            color: #ffffff;
+            font-size: 22px;
+            padding-left: 70px;
+            gap:600px
+        }
+        .section1p2ch2{
+            font-size: 32px;
+            color: gray;
+            gap: 10px;
+        }
+        
+            
+        
+      
+
+        
+
+
+       
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="navparent">
+        <div class="navch1">Dream Home</div>
+        <div class="navch2"><a href="./home.html">Home</a></div>
+        <div class="navch3"><a href="./propertys.html">Property</a></div>
+        <div class="navch4"><a href="./agents.html">Agent</a></div>
+        <div class="navch5"><a href="./About.html">About</a></div>
+        <div class="navch6"><a href="./contact.html">Contact</a></div>
+    </div>
+    <div class="section1">
+        <div class="section1sub1">
+            <div class="blackpop">
+                <p>Search your next dream home here</p>
+                <form action="">
+                    <input type="text" id="adress" placeholder="Enter adress,pincode,nearest land mark">
+                    <ion-icon name="location" id="location"></ion-icon>
+                    <select name="homefor" id="selectop">
+                        <option value="rent" selected>For Rent</option>
+                        <option value="sale">For Sale</option>
+                    </select>
+                    <ion-icon name="chevron-down-outline" id="dropicon"></ion-icon>
+                    <button id="buttonsearch" t>Start search</button>
+                    <ion-icon name="search" id="searchicon"></ion-icon>
+                </form>
+                <p id="quotesearch">Homes that speak to your soul</p>
+
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="section2">
+        <div class="section2sub1">
+            <img src="https://cdn-icons-png.flaticon.com/512/13191/13191854.png" alt="home award">
+            <p id="section2p1">Award Winning Brooker</p>
+            <p id="section2p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+            <a href="#" id="linksection2">Find out more</a>
+        </div>
+        <div class="section2sub2">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/321/744/large_2x/realistic-house-with-new-home-sign-vector.jpg" alt="home award">
+            <p id="section2p1">New Houses</p>
+            <p id="section2p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+            <a href="#" id="linksection2">Find out more</a>
+        </div>
+        <div class="section2sub3">
+            <img src="https://static.vecteezy.com/system/resources/previews/049/693/399/non_2x/golden-indian-rupee-sign-and-indian-currency-coin-isolated-on-3d-render-png.png" alt="home award" >
+            <p id="section2p1">Award Winning Brooker</p>
+            <p id="section2p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+            <a href="#" id="linksection2">Find out more</a>
+        </div>
+    </div>
+    <div class="sec3head"><p>Explore Our Neighborhoods</p></div>
+    <div class="section3">
+        <div id="section3img1">
+            <img src="https://uicookies.com/demo/theme/haus/img/slider_2.jpg" alt="" id="section3img1img1">>
+            <div class="overlay1"></div>
+            <div id="section3img1onp1">New York</div>
+            <div id="section3img1onp2">430 Properties</div>
+        </div>
+        
+        <div id="section3img2">
+            <img src="https://uicookies.com/demo/theme/haus/img/slider_1.jpg" alt=""id="section3img1img1"> >
+            <div class="overlay2"></div>
+            <div id="section3img1onp1">Brooklyn</div>
+            <div id="section3img1onp2">300 Properties</div>
+        </div>
+        
+        
+        <div  id="section3img3">
+            <img src="https://uicookies.com/demo/theme/haus/img/slider_3.jpg" alt="">
+            <div class="overlay3"></div>
+            <div id="section3img1onp1">New York</div>
+            <div id="section3img1onp2">430 Properties</div>
+        </div>
+        
+        <div id="section3img4">
+            <img src="https://uicookies.com/demo/theme/haus/img/slider_4.jpg" alt="" >
+            <div class="overlay4"></div>
+            <div id="section3img1onp1">chicago</div>
+            <div id="section3img1onp2">268 Properties</div>
+        </div>
+        
+        <div id="section3img5">
+            <img src="https://uicookies.com/demo/theme/haus/img/slider_2.jpg" alt="" >
+            <div class="overlay5"></div>
+            <div id="section3img1onp1">los angeles</div>
+            <div id="section3img1onp2">342 Properties</div>    
+        </div>
+       
+       
+    </div>
+    <div class="section4">
+        <div class="section4sub1">
+            <p id="section4p1">Best Home & Properties</p>
+            <p id="section4p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            </p>
+            <a href="#" id="section4l1">Find out more</a>
+        </div>
+    </div>
+   
+    <div class="section5">
+        <div class="section5titel">
+            Featured Listing
+        </div>
+        <div class="section5flexlayout">
+            <div class="section5flexlayoutch1">
+                <img src="https://uicookies.com/demo/theme/haus/img/slider_1.jpg" alt="">
+                <div id="wishbg">
+                 <a href="#" id="sec5wishlink"><ion-icon name="heart-circle" id="wish"></ion-icon></a>
+                </div>
+                <p id="p51">3 Bed Room Property for Sale</p>
+                <ion-icon name="location" id="seclocation5"></ion-icon>
+                <p id="p52">360 W Wellington Chicago, IL 60657</p>
+                <p id="sale5">For sale</p>
+                <p id="prise5">$  1,121,000 </p>
+                <p id="monthfor5">/ month</p>
+                <div class="hrline"></div>
+                <div class="section5foot">
+                    <div class="sec5footch1">Area</div>
+                    <div class="sec5footch2">Beds</div>
+                    <div class="sec5footch3">Baths</div>
+                    <div class="sec5footch4">Garages</div>
+                    <div class="sec5footch5">2400 m2</div>
+                    <div class="sec5footch6">3</div>
+                    <div class="sec5footch7">2</div>
+                    <div class="sec5footch8">1</div>
+                </div>
+                
+            
+        
+            </div>
+            <div class="section5flexlayoutch1">
+                <img src="https://uicookies.com/demo/theme/haus/img/slider_2.jpg" alt="">
+                <div id="wishbg">
+                    <a href="#" id="sec5wishlink"><ion-icon name="heart-circle" id="wish"></ion-icon></a>
+                </div>
+                <p id="p51">3 Bed Room Property for Sale</p>
+                <ion-icon name="location" id="seclocation5"></ion-icon>
+                <p id="p52">360 W Wellington Chicago, IL 60657</p>
+                <p id="sale5">For sale</p>
+                <p id="prise5">$  250,000 </p>
+                <p id="monthfor5">/ month</p>
+                <div class="hrline"></div>
+                <div class="section5foot">
+                    <div class="sec5footch1">Area</div>
+                    <div class="sec5footch2">Beds</div>
+                    <div class="sec5footch3">Baths</div>
+                    <div class="sec5footch4">Garages</div>
+                    <div class="sec5footch5">2400 m2</div>
+                    <div class="sec5footch6">3</div>
+                    <div class="sec5footch7">2</div>
+                    <div class="sec5footch8">1</div>
+                </div>
+                
+            </div>
+            <div class="section5flexlayoutch1">
+                <img src="https://uicookies.com/demo/theme/haus/img/slider_3.jpg" alt="">
+                <div id="wishbg">
+                    <a href="#" id="sec5wishlink"><ion-icon name="heart-circle" id="wish"></ion-icon></a>
+                </div>
+                <p id="p51">3 Bed Room Property for Sale</p>
+                <ion-icon name="location" id="seclocation5"></ion-icon>
+                <p id="p52">360 W Wellington Chicago, IL 60657</p>
+                <p id="rent5">For sale</p>
+                <p id="prise5">$  1,121,000 </p>
+                <p id="monthfor5">/ month</p>
+                <div class="hrline"></div>
+                <div class="section5foot">
+                    <div class="sec5footch1">Area</div>
+                    <div class="sec5footch2">Beds</div>
+                    <div class="sec5footch3">Baths</div>
+                    <div class="sec5footch4">Garages</div>
+                    <div class="sec5footch5">2400 m2</div>
+                    <div class="sec5footch6">3</div>
+                    <div class="sec5footch7">2</div>
+                    <div class="sec5footch8">1</div>
+                </div>
+                
+            </div>
+            <div class="section5flexlayoutch1">
+                <img src="https://uicookies.com/demo/theme/haus/img/slider_4.jpg" alt="">
+                <div id="wishbg">
+                    <a href="#" id="sec5wishlink"><ion-icon name="heart-circle" id="wish"></ion-icon></a>
+                </div>
+                <p id="p51">3 Bed Room Property for Sale</p>
+                <ion-icon name="location" id="seclocation5"></ion-icon>
+                <p id="p52">360 W Wellington Chicago, IL 60657</p>
+                <p id="sale5">For sale</p>
+                <p id="prise5">$  125,000</p>
+                <p id="monthfor5">/ month</p>
+                <div class="hrline"></div>
+                <div class="section5foot">
+                    <div class="sec5footch1">Area</div>
+                    <div class="sec5footch2">Beds</div>
+                    <div class="sec5footch3">Baths</div>
+                    <div class="sec5footch4">Garages</div>
+                    <div class="sec5footch5">2400 m2</div>
+                    <div class="sec5footch6">3</div>
+                    <div class="sec5footch7">2</div>
+                    <div class="sec5footch8">1</div>
+                </div>
+                
+            </div>
+            <div class="section5flexlayoutch1">
+                <img src="https://uicookies.com/demo/theme/haus/img/slider_2.jpg" alt="">
+                <div id="wishbg">
+                    <a href="#" id="sec5wishlink"><ion-icon name="heart-circle" id="wish"></ion-icon></a>
+                </div>
+                <p id="p51">3 Bed Room Property for Sale</p>
+                <ion-icon name="location" id="seclocation5"></ion-icon>
+                <p id="p52">360 W Wellington Chicago, IL 60657</p>
+                <p id="sale5">For sale</p>
+                <p id="prise5">$ 125,000 </p>
+                <p id="monthfor5">/ month</p>
+                <div class="hrline"></div>
+                <div class="section5foot">
+                    <div class="sec5footch1">Area</div>
+                    <div class="sec5footch2">Beds</div>
+                    <div class="sec5footch3">Baths</div>
+                    <div class="sec5footch4">Garages</div>
+                    <div class="sec5footch5">2400 m2</div>
+                    <div class="sec5footch6">3</div>
+                    <div class="sec5footch7">2</div>
+                    <div class="sec5footch8">1</div>
+                </div>
+                
+            </div>
+            <div class="section5flexlayoutch1">
+                <img src="https://uicookies.com/demo/theme/haus/img/slider_1.jpg" alt="">
+                <div id="wishbg">
+                    <a href="#" id="sec5wishlink"><ion-icon name="heart-circle" id="wish"></ion-icon></a>
+                </div>
+                <p id="p51">3 Bed Room Property for Sale</p>
+                <ion-icon name="location" id="seclocation5"></ion-icon>
+                <p id="p52">360 W Wellington Chicago, IL 60657</p>
+                <p id="sale5">For sale</p>
+                <p id="prise5">$  125,000 </p>
+                <p id="monthfor5">/ month</p>
+                <div class="hrline"></div>
+                <div class="section5foot">
+                    <div class="sec5footch1">Area</div>
+                    <div class="sec5footch2">Beds</div>
+                    <div class="sec5footch3">Baths</div>
+                    <div class="sec5footch4">Garages</div>
+                    <div class="sec5footch5">2400 m2</div>
+                    <div class="sec5footch6">3</div>
+                    <div class="sec5footch7">2</div>
+                    <div class="sec5footch8">1</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        <div class="section6">
+                <div class="section6parent">
+                    <div class="section6pch1">
+                        <p id="p1">Why Choose Us</p>
+                        <p id="p2">You Will Love Our Services</p>
+                        <p id="p3">Far far away, behind the word mountains, far from the countries 
+                            Vokalia and Consonantia, there live the blind texts. Separated they 
+                             in Bookmarksgrove right at the coast of the Semantics, a large language
+                              ocean.</p>
+                        <p id="p4">A small river named Duden flows by their place and supplies it with
+                             the necessary regelialia. It is a paradisematic country, in which roasted 
+                             parts of sentences fly into your mouth.</p>
+                        <p id="p5"><a href="#" id="p6">Find out more</a></p>
+                    </div>
+                    <div class="section6pch2">
+                       <img src="https://www.hindustantimes.com/ht-img/img/2025/06/29/550x309/ge992e782fe43_1751198792339_1751198792564.jpg" alt="">
+                    </div>
+                </div>
+        </div>
+
+        <div class="section7">
+            <div class="section7titel">
+                Our Services
+            </div>
+            <div class="section7parent">
+                <div class="section7parentch1">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10650/10650156.png" alt="" id="section7img">
+                    <p id="section7p1">Property Listing</p>
+                    <p id="section7p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="section7parentch2">
+                    <img src="https://www.smartpropertymanager.com/wp-content/uploads/2022/04/smp-logo-224.png" alt="" id="section7img">
+                    <p id="section7p1">Property Management</p>
+                    <p id="section7p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="section7parentch3">
+                    <img src="https://cdn2.iconfinder.com/data/icons/signs-symbols-4/512/24-512.png" alt="" id="section7img">
+                    <p id="section7p1">Renting Properties</p>
+                    <p id="section7p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="section7parentch4">
+                    <img src="https://img1.exportersindia.com/product_images/bc-full/2019/12/6189931/selling-properties-1575348412-5185511.jpg" alt="" id="section7img">
+                    <p id="section7p1">Selling Properties</p>
+                    <p id="section7p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="section7parentch5">
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/online-property-booking-5364265-4501095.png" alt="" id="section7imgbook">
+                    <p id="section7p1">Brook A Property</p>
+                    <p id="section7p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="section7parentch6">
+                    <img src="https://cdn-icons-png.flaticon.com/512/14596/14596993.png" alt="" id="section7imgsearch">
+                    <p id="section7p1">Search Property</p>
+                    <p id="section7p2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="section8">
+            <div class="section8titel">
+                Our Agents
+            </div>
+            <div class="section8parent">
+                <div class="section8child">
+                    <div class="profileimgbg">
+                        <img src="https://uicookies.com/demo/theme/haus/img/person_1.jpg" alt="" id="section8img">
+                    </div>
+                    <p id="section8p1">Jeremy Slater</p>
+                    <p id="section8p2">Real Estate Brooker</p>
+                    <a href="#">View details</a>
+                </div>
+                <div class="section8child">
+                    <div class="profileimgbg">
+                        <img src="https://uicookies.com/demo/theme/haus/img/person_2.jpg" alt="" id="section8img">
+                    </div>
+                    <p id="section8p1">Jeremy Slater</p>
+                    <p id="section8p2">Buying Agent</p>
+                    <a href="#">View details</a>
+                </div>
+                <div class="section8child">
+                    <div class="profileimgbg">
+                        <img src="https://uicookies.com/demo/theme/haus/img/person_3.jpg" alt="" id="section8img">
+                    </div>
+                    <p id="section8p1">Jeremy Slater</p>
+                    <p id="section8p2">Real Estate Brooker</p>
+                    <a href="#">View details</a>
+                </div>
+                <div class="section8child">
+                    <div class="profileimgbg">
+                        <img src="https://uicookies.com/demo/theme/haus/img/person_4.jpg" alt="" id="section8img">
+                    </div>
+                    <p id="section8p1">Jeremy Slater</p>
+                    <p id="section8p2">Selling Agent</p>
+                    <a href="#">View details</a>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="section9">
+                <div class="section9p">
+                    <div class="section9p1">
+                        <div class="section1p1ch">
+                            <p id="section9ch1p1">ABOUT Dream Home.</p>
+                            <p id="section9ch1p2">Far far away, behind the word <br> mountains, far from the countries <br>
+                                Vokalia and Consonantia, there <br> live the blind texts.
+                            </p>
+                            <p id="section9ch1p3">
+                                Read more...
+                            </p>
+                        </div>
+                        <div class="section1p1ch">
+                            <p id="section9ch1p1">QUICK LINKS</p>
+                            <p><a href="#" id="linksec9ch2">Property Listing</a></p>
+                            <p><a href="#" id="linksec9ch2">Rent Properties</a></p>
+                            <p><a href="#" id="linksec9ch2">Sell Properties</a></p>
+                            <p><a href="#" id="linksec9ch2">Agents</a></p>
+                            <p><a href="#" id="linksec9ch2">Testimonial</a></p>
+                        </div>
+                        <div class="section1p1ch">
+                            <p>POPULAR CITIES</p>
+                            <p><a href="#"id="linksec9ch2">New York <span id="linksubsec9ch2">(320 properties)</span></a></p>
+                            <p><a href="#" id="linksec9ch2">San FranciscO<span id="linksubsec9ch2">(294 properties)</span></a></p>
+                            <p><a href="#" id="linksec9ch2">Brooklyn<span id="linksubsec9ch2"> (300 properties)</span></a></p>
+                            <p><a href="#" id="linksec9ch2">Chicago <span id="linksubsec9ch2"> (1258 properties)</span></a></p>
+                            <p><a href="#" id="linksec9ch2">Los Angeles<span id="linksubsec9ch2"> ( 042 properties)</span></a></p>
+
+
+
+
+                        </div>
+                        <div class="section1p1ch">
+                            <p id="section9ch1p1">SUBSCRIBE</p>
+                            <p>Far far away behind the word <br>mountains far from.</p>
+                            <div class="mail"><input type="mail" placeholder="Enter your email" id="section9mail"><button id="sendbutton">send</button></div>
+                        </div>
+                    </div>
+                    <div class="section9p2">
+                        <div class="section1p2ch"><p id="section9ch1p1">&copy 2025 <span id="linksubsec9ch2"> Dream Home</span> Designed By <span id="linksubsec9ch2">Ramakrishna</span> </p>
+                            <p id="section9ch1p1">Demo photos from<span id="linksubsec9ch2"> Pixeby</span> &<span id="linksubsec9ch2"> unplash</span> </p>
+
+                        </div>
+                        <div class="section1p2ch2"><ion-icon name="logo-twitter"></ion-icon> <ion-icon name="logo-facebook"></ion-icon> <ion-icon name="logo-instagram"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+
+    
+
+    
+   
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./gsap.js"></script>
+</body>
+</html>
